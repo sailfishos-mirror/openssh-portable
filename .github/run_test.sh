@@ -52,7 +52,7 @@ else
 fi
 
 # Activate kbdint regression test for PAM
-if echo "${SSHD_CONFOPTS}" | grep -i usepam >/dev/null; then
+if echo "${SSHD_CONFOPTS}" | grep -i usepam >/dev/null && [ -f regress/password ]; then
 	cp regress/password regress/kbdintpw
 fi
 
